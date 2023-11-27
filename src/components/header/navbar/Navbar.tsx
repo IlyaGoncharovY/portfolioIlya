@@ -1,66 +1,11 @@
 import React from 'react';
-import styled from "styled-components";
 
+import {NavbarItem} from "./item/NavbarItem";
 import logoReact from "../../../assects/img/logo.png"
 import searchImg from "../../../assects/img/search.png"
+import {headersData} from "../../../assects/dataSet/dataSet";
+import {Button, Container, Icon, Icons, Links, List, Logo, Section} from "./NavbarStyle";
 
-const Section = styled.div`
-  display: flex;
-  justify-content: center;
-  
-  @media only screen and (max-width: 768px){
-    width: 100%;
-  }
-`
-const Container = styled.div`
-  width: 1400px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0px;
-
-  @media only screen and (max-width: 768px){
-    width: 100%;
-    padding: 10px;
-  }
-`
-const Links = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 30px;
-`
-const Logo = styled.img`
-  height: 50px;
-`
-const List = styled.ul`
-  display: flex;
-  gap: 20px;
-  list-style: none;
-
-  @media only screen and (max-width: 768px) {
-    display: none;
-  }
-`
-const ListItem = styled.li`
-  cursor: pointer;
-`
-const Icons = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 20px;
-`
-const Icon = styled.img`
-  width: 20px;
-  cursor: pointer;
-`
-const Button = styled.button`
-  width: 100px;
-  padding: 10px;
-  background-color: #9bc2c2;
-  color: #4a4d5d;
-  border-radius: 5px;
-  cursor: pointer;
-`
 export const Navbar = () => {
     return (
         <Section>
@@ -68,10 +13,7 @@ export const Navbar = () => {
                 <Links>
                     <Logo src={`${logoReact}`}/>
                     <List>
-                        <ListItem>Home</ListItem>
-                        <ListItem>Studio</ListItem>
-                        <ListItem>Works</ListItem>
-                        <ListItem>Contact</ListItem>
+                        {headersData.map(header => <NavbarItem key={header.id} navbar={header.value}/>)}
                     </List>
                 </Links>
                 <Icons>

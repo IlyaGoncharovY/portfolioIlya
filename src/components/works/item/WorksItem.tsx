@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import styled from "styled-components";
 
-import {dataType, valueType} from "../Works";
+import {valueWorksDataType, worksDataType} from "../../../assects/dataSet/dataSet";
 
 const ListItem = styled.li`
   font-size: 60px;
@@ -24,8 +24,8 @@ const ListItem = styled.li`
 `
 
 interface IWorksItem {
-    work: dataType
-    setWork: (work: valueType) => void
+    work: worksDataType
+    setWork: (work: valueWorksDataType) => void
 }
 
 export const WorksItem: FC<IWorksItem> = ({work, setWork}) => {

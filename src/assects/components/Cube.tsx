@@ -4,7 +4,7 @@ import {useFrame} from "@react-three/fiber";
 import {PerspectiveCamera, RenderTexture, Text} from "@react-three/drei";
 
 export const Cube = () => {
-    const textRef = useRef<THREE.Object3D>()
+    const textRef = useRef<THREE.Object3D>(null)
     useFrame((state) => {
         if (textRef.current) {
             textRef.current.position.x = Math.sin(state.clock.elapsedTime) * 1.1;

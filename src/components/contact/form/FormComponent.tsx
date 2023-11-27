@@ -2,36 +2,10 @@ import React, {useState} from 'react';
 import * as yup from 'yup';
 import Swal from "sweetalert2";
 import {useFormik} from "formik";
-import styled from "styled-components";
 import * as emailjs from 'emailjs-com';
 
 import {UniversalButton} from "../../../assects/components/UniversalButton";
-
-const Title = styled.h1`
-  font-weight: 200;
-`
-const Form = styled.form`
-  width: 500px;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-
-  @media only screen and (max-width: 768px) {
-    width: 300px;
-  }
-`
-const Input = styled.input`
-  padding: 20px;
-  background-color: #a7aaad;
-  border: none;
-  border-radius: 5px;
-`
-const TextArea = styled.textarea`
-  padding: 20px;
-  background-color: #a7aaad;
-  border: none;
-  border-radius: 5px;
-`
+import {Form, Input, TextArea, Title} from "./FormStyle";
 
 const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID
 const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID

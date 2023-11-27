@@ -1,71 +1,11 @@
 import React from 'react';
-import styled from "styled-components";
 import {Canvas} from "@react-three/fiber";
 import {OrbitControls} from "@react-three/drei";
 
 import lineImg from "../../assects/img/line.png";
 import {Cube} from "../../assects/components/Cube";
 import {UniversalButton} from "../../assects/components/UniversalButton";
-
-const Section = styled.div`
-  height: 100vh;
-  scroll-snap-align: center;
-  display: flex;
-  justify-content: center;
-`
-const Container = styled.div`
-  height: 100vh;
-  scroll-snap-align: center;
-  width: 1400px;
-  display: flex;
-  justify-content: space-between;
-`
-const Left = styled.div`
-  flex: 1;
-
-  @media only screen and (max-width: 768px) {
-    display: none;
-  }
-`
-const Title = styled.h1`
-  font-size: 74px;
-
-  @media only screen and (max-width: 768px) {
-    font-size: 60px;
-  }
-`
-const Right = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-
-  @media only screen and (max-width: 768px) {
-    align-items: center;
-    text-align: center;
-  }
-`
-const WhatWeDo = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-`
-const Line = styled.img`
-  height: 5px;
-`
-const SubTitle = styled.h2`
-  color: #9bc2c2;
-`
-const Desc = styled.p`
-  font-size: 24px;
-  color: #737d81;
-  @media only screen and (max-width: 768px) {
-    font-size: 24px;
-    color: #737d81;
-    padding: 5px;
-  }
-`
+import {Container, Desc, Left, Line, Right, Section, SubTitle, Title, WhatWeDo} from "./AdoutMeStyle";
 
 export const AboutMe = () => {
     return (

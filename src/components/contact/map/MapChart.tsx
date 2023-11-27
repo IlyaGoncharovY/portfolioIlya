@@ -10,7 +10,7 @@ export const MapChart = () => {
                 center: [5, 5],
                 scale: 1100
             }}
-            style={{width: "100%", height:"100%"}}
+            style={{width: "100%", height: "100%"}}
         >
             <Geographies
                 geography="/features.json"
@@ -18,9 +18,9 @@ export const MapChart = () => {
                 stroke="#FFFFFF"
                 strokeWidth={0.5}
             >
-                {({ geographies }) =>
+                {({geographies}) =>
                     geographies.map((geo) => (
-                        <Geography key={geo.rsmKey} geography={geo} />
+                        <Geography key={geo.rsmKey} geography={geo}/>
                     ))
                 }
             </Geographies>
