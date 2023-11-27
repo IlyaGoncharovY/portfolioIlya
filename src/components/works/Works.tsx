@@ -1,14 +1,13 @@
 import React, {useState} from 'react';
 import styled from "styled-components";
 
+import {WorksItem} from "./item/WorksItem";
 import {WebDesign} from "./components/WebDesign";
 import {Development} from "./components/Development";
 import {SocialMedia} from "./components/SocialMedia";
 import {ProductDesign} from "./components/ProductDesign";
-import {WorksItem} from "./item/WorksItem";
 
 type valueType = "Web Design" | "Development" | "Product Design" | "Social Media"
-
 
 type dataType = {
     id: number,
@@ -17,9 +16,9 @@ type dataType = {
 
 const data: dataType[] = [
     {id: 1, value: "Web Design"},
-    {id: 1, value: "Development"},
-    {id: 1, value: "Product Design"},
-    {id: 1, value: "Social Media"},
+    {id: 2, value: "Development"},
+    {id: 3, value: "Product Design"},
+    {id: 4, value: "Social Media"},
 ]
 
 const Section = styled.div`
