@@ -17,18 +17,18 @@ export const Works = () => {
     switch (work) {
         case 'Web Design':
             selectedComponent = <WebDesign />;
-            break;
+            break
         case 'Development':
             selectedComponent = <Development />;
-            break;
+            break
         case 'Social Media':
             selectedComponent = <SocialMedia />;
-            break;
+            break
         case 'Product Design':
             selectedComponent = <ProductDesign />;
-            break;
+            break
         default:
-            selectedComponent = null; // Handle the default case if necessary
+            selectedComponent = null
     }
 
     return (
