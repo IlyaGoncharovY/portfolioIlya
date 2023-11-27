@@ -5,12 +5,21 @@ import {WebDesign} from "./components/WebDesign";
 import {Development} from "./components/Development";
 import {SocialMedia} from "./components/SocialMedia";
 import {ProductDesign} from "./components/ProductDesign";
+import {WorksItem} from "./item/WorksItem";
 
-const data: ["Web Design", "Development", "Product Design", "Social Media"] = [
-    "Web Design",
-    "Development",
-    "Product Design",
-    "Social Media"
+type valueType = "Web Design" | "Development" | "Product Design" | "Social Media"
+
+
+type dataType = {
+    id: number,
+    value: valueType
+}
+
+const data: dataType[] = [
+    {id: 1, value: "Web Design"},
+    {id: 1, value: "Development"},
+    {id: 1, value: "Product Design"},
+    {id: 1, value: "Social Media"},
 ]
 
 const Section = styled.div`
@@ -19,7 +28,7 @@ const Section = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
- 
+
 `
 const Container = styled.div`
   height: 800px;
@@ -49,40 +58,22 @@ const List = styled.ul`
   flex-direction: column;
   gap: 20px;
 `
-const ListItem = styled.li`
-  font-size: 60px;
-  font-weight: bold;
-  cursor: pointer;
-  color: transparent;
-  -webkit-text-stroke: 1px white;
-  position: relative;
 
-  @media only screen and (max-width: 768px) {
-    font-size: 24px;
-    color: white;
-    -webkit-text-stroke: 0px transparent;
-  }
-
-  &:hover {
-    color: yellow;
-    transition: color 0.5s ease;
-  }
-`
 const Right = styled.div`
   flex: 1;
 `
 
 export const Works = () => {
 
-    const [work, setWork] = useState<string>("Web Design")
+    const [work, setWork] = useState<valueType>("Web Design")
 
     return (
         <Section>
             <Container>
                 <Left>
                     <List>
-                        {data.map((el, index) => (
-                            <ListItem key={index} onClick={() => setWork(el)}>{el}</ListItem>
+                        {data.map((el) => (
+                            <WorksItem key={el.id} work={el.value}/>
                         ))}
                     </List>
                 </Left>
