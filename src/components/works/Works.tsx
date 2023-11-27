@@ -7,9 +7,9 @@ import {Development} from "./components/Development";
 import {SocialMedia} from "./components/SocialMedia";
 import {ProductDesign} from "./components/ProductDesign";
 
-type valueType = "Web Design" | "Development" | "Product Design" | "Social Media"
+export type valueType = "Web Design" | "Development" | "Product Design" | "Social Media"
 
-type dataType = {
+export type dataType = {
     id: number,
     value: valueType
 }
@@ -72,7 +72,7 @@ export const Works = () => {
                 <Left>
                     <List>
                         {data.map((el) => (
-                            <WorksItem key={el.id} work={el.value}/>
+                            <WorksItem key={el.id} work={el} setWork={setWork}/>
                         ))}
                     </List>
                 </Left>

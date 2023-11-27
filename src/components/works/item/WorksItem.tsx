@@ -1,6 +1,8 @@
 import React, {FC} from 'react';
 import styled from "styled-components";
 
+import {dataType, valueType} from "../Works";
+
 const ListItem = styled.li`
   font-size: 60px;
   font-weight: bold;
@@ -22,13 +24,14 @@ const ListItem = styled.li`
 `
 
 interface IWorksItem {
-    work: string
+    work: dataType
+    setWork: (work: valueType) => void
 }
 
-export const WorksItem: FC<IWorksItem> = ({work}) => {
+export const WorksItem: FC<IWorksItem> = ({work, setWork}) => {
     return (
-        <ListItem>
-            {work}
+        <ListItem onClick={() => setWork(work.value)}>
+            {work.value}
         </ListItem>
     );
 };
