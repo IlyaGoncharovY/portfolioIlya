@@ -5,6 +5,8 @@ import {useFormik} from "formik";
 import styled from "styled-components";
 import * as emailjs from 'emailjs-com';
 
+import {UniversalButton} from "../../../assects/components/UniversalButton";
+
 const Title = styled.h1`
   font-weight: 200;
 `
@@ -30,24 +32,13 @@ const TextArea = styled.textarea`
   border: none;
   border-radius: 5px;
 `
-const Button = styled.button`
-  background-color: #9bc2c2;
-  color: white;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
-  padding: 20px;
-`
 
 const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID
 const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID
 const userID = process.env.REACT_APP_EMAILJS_USER_ID
 
 export const FormComponent = () => {
-    console.log('serviceID:', serviceID);
-    console.log('templateID:', templateID);
-    console.log('userID:', userID);
+
     const [buttonState, setButtonState] = useState<string>('Send Message');
 
     const formik = useFormik({
@@ -121,7 +112,7 @@ export const FormComponent = () => {
             />
             {formik.touched.message && formik.errors.message &&
                 <div style={{color: 'red', opacity: 0.8}}>{formik.errors.message}</div>}
-            <Button type={"submit"} disabled={formik.isSubmitting}>{buttonState}</Button>
+            <UniversalButton type={"submit"} disabled={formik.isSubmitting} title={`${buttonState}`}/>
         </Form>
     );
 };

@@ -6,6 +6,7 @@ import {Navbar} from "./navbar/Navbar";
 import {Canvas} from "@react-three/fiber";
 import lineImg from "../../assects/img/line.png"
 import starShipsImg from "../../assects/img/starShips.png"
+import {UniversalButton} from "../../assects/components/UniversalButton";
 
 
 const Section = styled.div`
@@ -80,15 +81,6 @@ const Desc = styled.p`
     text-align: center;
   }
 `
-const Button = styled.button`
-  background-color: #9bc2c2;
-  color: white;
-  font-weight: 500;
-  width: 100px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-`
 const Right = styled.div`
   flex: 3;
   position: relative;
@@ -136,7 +128,7 @@ export const Header = () => {
                     <Desc>
                         I create interesting applications, I try not to stand still.
                     </Desc>
-                    <Button>Learn more</Button>
+                    <UniversalButton title={"Learn more"}/>
                 </Left>
                 <Right>
                     <Canvas camera={{fov: 25, position: [5, 5, 5]}}>

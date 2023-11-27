@@ -4,6 +4,7 @@ import {Canvas} from "@react-three/fiber";
 import {OrbitControls, Stage} from "@react-three/drei";
 
 import TelegramLogo from "./3dModel/TelegramLogo";
+import {UniversalButton} from "../../../assects/components/UniversalButton";
 
 const Desc = styled.div`
   width: 200px;
@@ -34,7 +35,7 @@ export const SocialMedia = () => {
                 <OrbitControls enableZoom={false} autoRotate={true}/>
             </Canvas>
             <Desc>
-                <button>Send Me</button>
+                <UniversalButton title={"Send Me"}/>
             </Desc>
         </>
     );

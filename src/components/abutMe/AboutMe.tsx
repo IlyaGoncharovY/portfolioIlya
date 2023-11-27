@@ -3,8 +3,9 @@ import styled from "styled-components";
 import {Canvas} from "@react-three/fiber";
 import {OrbitControls} from "@react-three/drei";
 
-import {Cube} from "../Cube";
 import lineImg from "../../assects/img/line.png";
+import {Cube} from "../../assects/components/Cube";
+import {UniversalButton} from "../../assects/components/UniversalButton";
 
 const Section = styled.div`
   height: 100vh;
@@ -65,15 +66,7 @@ const Desc = styled.p`
     padding: 5px;
   }
 `
-const Button = styled.button`
-  background-color: #9bc2c2;
-  color: white;
-  font-weight: 500;
-  width: 120px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-`
+
 export const AboutMe = () => {
     return (
         <Section>
@@ -97,7 +90,7 @@ export const AboutMe = () => {
                         every day I develop my own projects
                         or study new language features.
                     </Desc>
-                    <Button>Sea are works</Button>
+                    <UniversalButton title={"Sea are works"}/>
                 </Right>
             </Container>
         </Section>
