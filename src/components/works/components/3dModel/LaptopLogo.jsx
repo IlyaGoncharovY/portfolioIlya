@@ -8,7 +8,7 @@ Source: https://sketchfab.com/3d-models/computer-and-laptop-8757cd8dd5c941248cc1
 Title: Computer and laptop
 */
 
-import React, {useRef} from 'react'
+import React from 'react'
 import {useGLTF} from '@react-three/drei'
 
 export default function Model(props) {

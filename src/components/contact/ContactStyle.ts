@@ -23,6 +23,7 @@ export const Left = styled.div`
 `
 export const Right = styled.div`
   flex: 1;
+  //padding: 50px;
   @media only screen and (max-width: 768px) {
     display: none;
   }

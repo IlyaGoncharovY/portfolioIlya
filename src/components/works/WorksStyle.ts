@@ -6,10 +6,10 @@ export const Section = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
-
 `
 export const Container = styled.div`
-  height: 800px;
+  //height: 800px;
+  height: 100vh;
   scroll-snap-align: center;
   display: flex;
   justify-content: space-between;
@@ -17,6 +17,7 @@ export const Container = styled.div`
   @media only screen and (max-width: 768px) {
     width: 100%;
     height: 100%;
+    //height: auto;
     flex-direction: column;
   }
 `

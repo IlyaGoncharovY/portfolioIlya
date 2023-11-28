@@ -3,7 +3,7 @@ import dgImage from "../assects/img/dg.jpeg";
 
 export const Container = styled.div`
   height: 100vh;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: both mandatory;
   scroll-behavior: smooth;
   overflow-y: auto;
   scrollbar-width: none;

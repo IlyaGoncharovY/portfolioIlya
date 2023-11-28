@@ -10,6 +10,7 @@ const ListItem = styled.li`
   color: transparent;
   -webkit-text-stroke: 1px white;
   position: relative;
+  //white-space: nowrap;
 
   @media only screen and (max-width: 768px) {
     font-size: 24px;
