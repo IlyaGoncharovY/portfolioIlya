@@ -1,10 +1,8 @@
 import styled from 'styled-components';
 
-import {CommonTitle} from '../../assects/style/gCommonStyle';
+import {CommonContainer, CommonSection, CommonTitle} from '../../assects/style/gCommonStyle';
 
-export const Section = styled.div`
-  height: 100vh;
-  scroll-snap-align: center;
+export const Section = styled(CommonSection)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,13 +13,11 @@ export const Section = styled.div`
   }
 `;
 
-export const Container = styled.div`
+export const Container = styled(CommonContainer)`
   height: 100%;
   scroll-snap-align: center;
   width: 1400px;
-  display: flex;
-  justify-content: space-between;
-
+  
   @media only screen and (max-width: 768px) {
     width: 100%;
     flex-direction: column;

@@ -1,18 +1,15 @@
 import styled from 'styled-components';
 
-export const Section = styled.div`
-  height: 100vh;
-  scroll-snap-align: center;
+import {CommonContainer, CommonLeft, CommonSection} from '../../assects/style/gCommonStyle';
+
+export const Section = styled(CommonSection)`
 `;
-export const Container = styled.div`
+export const Container = styled(CommonContainer)`
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: space-between;
   gap: 50px
 `;
-export const Left = styled.div`
-  flex: 1;
+export const Left = styled(CommonLeft)`
   display: flex;
   align-items: center;
   justify-content: flex-end;

@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import {CommonContainer} from '../../../assects/style/gCommonStyle';
+
 export const Section = styled.div`
   display: flex;
   justify-content: center;
@@ -8,10 +10,8 @@ export const Section = styled.div`
     width: 100%;
   }
 `;
-export const Container = styled.div`
+export const Container = styled(CommonContainer)`
   width: 1400px;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 10px 0px;
 
