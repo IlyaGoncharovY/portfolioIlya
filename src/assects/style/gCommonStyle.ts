@@ -13,3 +13,7 @@ export const CommonContainer = styled.div`
 export const CommonLeft = styled.div`
   flex: 1;
 `;
+
+export const CommonTitle = styled.h1`
+  font-size: 74px;
+`;

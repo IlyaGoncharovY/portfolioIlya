@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import {CommonTitle} from '../../assects/style/gCommonStyle';
+
 export const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
@@ -20,9 +22,7 @@ export const Left = styled.div`
     display: none;
   }
 `;
-export const Title = styled.h1`
-  font-size: 74px;
-
+export const Title = styled(CommonTitle)`
   @media only screen and (max-width: 768px) {
     font-size: 60px;
   }
@@ -46,9 +46,6 @@ export const WhatWeDo = styled.div`
 `;
 export const Line = styled.img`
   height: 5px;
-`;
-export const SubTitle = styled.h2`
-  color: #9bc2c2;
 `;
 export const Desc = styled.p`
   font-size: 24px;
