@@ -31,13 +31,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "eject": "react-scripts eject",
+    "lint": "eslint -c .eslintrc --ext .js,.jsx,.ts,.tsx",
+    "lint-fix": "yarn lint -- --fix"
   },
   "browserslist": {
     "production": [
@@ -53,6 +49,8 @@
   },
   "devDependencies": {
     "@types/react-simple-maps": "^3.0.4",
-    "@types/three": "^0.158.3"
+    "@types/three": "^0.158.3",
+    "eslint": "^8.54.0",
+    "eslint-config-react-app": "^7.0.1"
   }
 }
