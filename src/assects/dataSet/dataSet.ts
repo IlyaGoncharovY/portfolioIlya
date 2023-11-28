@@ -1,4 +1,4 @@
-export type valueHeadersType = 'Home' | 'Studio' | 'Works' | 'Contact'
+export type valueHeadersType = 'Home' | 'About Me' | 'Works' | 'Contact'
 
 export type headersDataType = {
     id: number
@@ -6,7 +6,7 @@ export type headersDataType = {
 }
 export const headersData: headersDataType[] = [
   {id: 1, value: 'Home'},
-  {id: 2, value: 'Studio'},
+  {id: 2, value: 'About Me'},
   {id: 3, value: 'Works'},
   {id: 4, value: 'Contact'},
 ];
