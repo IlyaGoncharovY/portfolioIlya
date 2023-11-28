@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import {valueWorksDataType, worksDataType} from "../../../assects/dataSet/dataSet";
+import {valueWorksDataType, worksDataType} from '../../../assects/dataSet/dataSet';
 
 const ListItem = styled.li`
   font-size: 60px;
@@ -22,7 +22,7 @@ const ListItem = styled.li`
     color: #3af37a;
     transition: color 0.5s ease;
   }
-`
+`;
 
 interface IWorksItem {
     work: worksDataType
@@ -30,9 +30,9 @@ interface IWorksItem {
 }
 
 export const WorksItem: FC<IWorksItem> = ({work, setWork}) => {
-    return (
-        <ListItem onClick={() => setWork(work.value)}>
-            {work.value}
-        </ListItem>
-    );
+  return (
+    <ListItem onClick={() => setWork(work.value)}>
+      {work.value}
+    </ListItem>
+  );
 };

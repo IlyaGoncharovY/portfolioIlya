@@ -1,5 +1,6 @@
-import styled from "styled-components";
-import dgImage from "../assects/img/dg.jpeg";
+import styled from 'styled-components';
+
+import dgImage from '../assects/img/dg.jpeg';
 
 export const Container = styled.div`
   height: 100vh;
@@ -13,4 +14,4 @@ export const Container = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
-`
+`;

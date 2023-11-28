@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Section = styled.div`
   height: 100vh;
@@ -6,7 +6,7 @@ export const Section = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
-`
+`;
 export const Container = styled.div`
   //height: 800px;
   height: 100vh;
@@ -20,7 +20,7 @@ export const Container = styled.div`
     //height: auto;
     flex-direction: column;
   }
-`
+`;
 export const Left = styled.div`
   flex: 1;
   display: flex;
@@ -30,14 +30,14 @@ export const Left = styled.div`
     padding: 20px;
     justify-content: center;
   }
-`
+`;
 export const List = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 20px;
-`
+`;
 
 export const Right = styled.div`
   flex: 1;
-`
+`;

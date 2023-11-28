@@ -1,9 +1,10 @@
 import React from 'react';
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import TelegramLogo from "./3dModel/TelegramLogo";
-import {CustomCanvas} from "./defaultModel/CustomCanvas";
-import {UniversalButton} from "../../../assects/components/UniversalButton";
+import {UniversalButton} from '../../../assects/components/UniversalButton';
+
+import TelegramLogo from './3dModel/TelegramLogo';
+import {CustomCanvas} from './defaultModel/CustomCanvas';
 
 const Desc = styled.div`
   width: 200px;
@@ -20,17 +21,17 @@ const Desc = styled.div`
     right: 0;
     margin: auto;
   }
-`
+`;
 
 export const SocialMedia = () => {
-    return (
-        <>
-            <CustomCanvas>
-                <TelegramLogo/>
-            </CustomCanvas>
-            <Desc>
-                <UniversalButton title={"Send Me"}/>
-            </Desc>
-        </>
-    );
+  return (
+    <>
+      <CustomCanvas>
+        <TelegramLogo/>
+      </CustomCanvas>
+      <Desc>
+        <UniversalButton title={'Send Me'}/>
+      </Desc>
+    </>
+  );
 };

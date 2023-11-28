@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Section = styled.div`
   height: 100vh;
@@ -11,7 +11,7 @@ export const Section = styled.div`
   @media only screen and (max-width: 768px) {
     height: 200vh;
   }
-`
+`;
 
 export const Container = styled.div`
   height: 100%;
@@ -26,7 +26,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
   }
-`
+`;
 
 export const Left = styled.div`
   flex: 2;
@@ -39,7 +39,7 @@ export const Left = styled.div`
     flex: 1;
     align-items: center;
   }
-`
+`;
 
 export const Title = styled.h1`
   font-size: 74px;
@@ -47,7 +47,7 @@ export const Title = styled.h1`
   @media only screen and (max-width: 768px) {
     text-align: center;
   }
-`
+`;
 export const WhatWeDo = styled.div`
   display: flex;
   align-items: center;
@@ -56,13 +56,13 @@ export const WhatWeDo = styled.div`
     text-align: center;
     padding: 20px;
   }
-`
+`;
 export const Line = styled.img`
   height: 5px;
-`
+`;
 export const SubTitle = styled.h2`
   color: #9bc2c2;
-`
+`;
 export const Desc = styled.p`
   font-size: 24px;
   color: #737d81;
@@ -71,7 +71,7 @@ export const Desc = styled.p`
     padding: 20px;
     text-align: center;
   }
-`
+`;
 export const Right = styled.div`
   flex: 3;
   position: relative;
@@ -80,7 +80,7 @@ export const Right = styled.div`
     flex: 1;
     width: 100%;
   }
-`
+`;
 export const Img = styled.img`
   width: 800px;
   height: 600px;
@@ -104,4 +104,4 @@ export const Img = styled.img`
       transform: translateY(25px);
     }
   }
-`
+`;

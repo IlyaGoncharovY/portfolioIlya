@@ -8,26 +8,26 @@ Source: https://sketchfab.com/3d-models/telegram-3d-icon-80421c5d474f4a3c8145ba4
 Title: Telegram 3D-icon
 */
 
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React from 'react';
+import {useGLTF} from '@react-three/drei';
 
 export default function Model(props) {
-  const { nodes, materials } = useGLTF('/telegramLogo-transformed.glb')
+  const { nodes, materials } = useGLTF('/telegramLogo-transformed.glb');
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Object_4.geometry}
-            material={materials.material}
-            position={[0, -0.02, -0.04]}
-            rotation={[-2.884, 0, -Math.PI / 2]}
-            scale={[1, 0.092, 1]}
+        material={materials.material}
+        position={[0, -0.02, -0.04]}
+        rotation={[-2.884, 0, -Math.PI / 2]}
+        scale={[1, 0.092, 1]}
       />
       <mesh geometry={nodes.Object_6.geometry}
-            material={materials['Material.002']}
-            position={[0.08, -0.054, 0.031]}
-            rotation={[0, 0, -Math.PI / 2]}
+        material={materials['Material.002']}
+        position={[0.08, -0.054, 0.031]}
+        rotation={[0, 0, -Math.PI / 2]}
       />
     </group>
-  )
+  );
 }
 
-useGLTF.preload('/telegramLogo-transformed.glb')
+useGLTF.preload('/telegramLogo-transformed.glb');
