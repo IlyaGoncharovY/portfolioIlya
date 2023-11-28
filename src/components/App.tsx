@@ -1,19 +1,21 @@
-import React from 'react';
-
-import {Works} from "./works/Works";
-import {Header} from "./header/Header";
-import {AboutMe} from "./abutMe/AboutMe";
-import {Contact} from "./contact/Contact";
+import React, {lazy, Suspense} from 'react';
 
 import {Container} from "./AppStyle";
+
+const Header = lazy(() => import('./header/Header'));
+const AboutMe = lazy(() => import('./abutMe/AboutMe'));
+const Works = lazy(() => import('./works/Works'));
+const Contact = lazy(() => import('./contact/Contact'));
 
 function App() {
     return (
         <Container>
-            <Header/>
-            <AboutMe/>
-            <Works/>
-            <Contact/>
+            <Suspense fallback={<div>Loading...</div>}>
+                <Header/>
+                <AboutMe/>
+                <Works/>
+                <Contact/>
+            </Suspense>
         </Container>
     );
 }

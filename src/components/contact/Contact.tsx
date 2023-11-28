@@ -4,7 +4,6 @@ import {MapChart} from "./map/MapChart";
 import {FormComponent} from "./form/FormComponent";
 import {Container, Left, Right, Section} from "./ContactStyle";
 
-
 export const Contact = () => {
     return (
         <Section>
@@ -19,3 +18,5 @@ export const Contact = () => {
         </Section>
     );
 };
+
+export default Contact

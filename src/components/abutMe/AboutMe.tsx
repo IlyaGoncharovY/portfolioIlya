@@ -7,7 +7,7 @@ import {Cube} from "../../assects/components/Cube";
 import {UniversalButton} from "../../assects/components/UniversalButton";
 import {Container, Desc, Left, Line, Right, Section, SubTitle, Title, WhatWeDo} from "./AdoutMeStyle";
 
-export const AboutMe = () => {
+const AboutMe = () => {
     return (
         <Section>
             <Container>
@@ -36,3 +36,5 @@ export const AboutMe = () => {
         </Section>
     );
 };
+
+export default AboutMe

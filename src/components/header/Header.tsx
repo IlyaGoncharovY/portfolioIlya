@@ -8,7 +8,7 @@ import starShipsImg from "../../assects/img/starShips.png"
 import {UniversalButton} from "../../assects/components/UniversalButton";
 import {Container, Desc, Img, Left, Line, Right, Section, SubTitle, Title, WhatWeDo} from "./HeaderStyle";
 
-export const Header = () => {
+const Header = () => {
     return (
         <Section>
             <Navbar/>
@@ -44,3 +44,5 @@ export const Header = () => {
         </Section>
     );
 };
+
+export default Header

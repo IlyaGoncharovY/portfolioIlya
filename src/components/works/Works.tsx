@@ -8,7 +8,7 @@ import {ProductDesign} from "./components/ProductDesign";
 import {valueWorksDataType, worksData} from "../../assects/dataSet/dataSet";
 import {Container, Left, List, Right, Section} from "./WorksStyle";
 
-export const Works = () => {
+const Works = () => {
 
     const [work, setWork] = useState<valueWorksDataType>("Web Design")
 
@@ -48,3 +48,5 @@ export const Works = () => {
         </Section>
     );
 };
+
+export default Works
