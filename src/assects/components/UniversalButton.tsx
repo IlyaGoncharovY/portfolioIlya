@@ -17,6 +17,7 @@ interface IUniversalButton {
     type?: 'button' | 'reset' | 'submit' | undefined
     disabled?: boolean
     onClickNavigate?: MouseEventHandler<HTMLButtonElement>
+    onClickDownload?: () => void
 }
 
 export const UniversalButton: FC<IUniversalButton> = ({
@@ -24,9 +25,10 @@ export const UniversalButton: FC<IUniversalButton> = ({
   type,
   disabled,
   onClickNavigate,
+  onClickDownload,
 }) => {
   return (
-    <Button type={type} disabled={disabled} onClick={onClickNavigate}>
+    <Button type={type} disabled={disabled} onClick={onClickNavigate || onClickDownload}>
       {title}
     </Button>
   );

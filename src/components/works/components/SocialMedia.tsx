@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import {UniversalButton} from '../../../assects/components/UniversalButton';
 
-import {navigateTo} from '../../../assects/helpers/NavigateTo';
+import {navigateTo} from '../../../assects/helpers/navigateTo';
 
 import TelegramLogo from './3dModel/TelegramLogo';
 import {CustomCanvas} from './defaultModel/CustomCanvas';

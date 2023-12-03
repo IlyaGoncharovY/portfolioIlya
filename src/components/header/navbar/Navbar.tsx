@@ -7,7 +7,7 @@ import searchOpenImg from '../../../assects/img/searchOpen.png';
 
 import {CustomButton} from '../../../assects/components/CustomButton';
 
-import {navigateTo} from '../../../assects/helpers/NavigateTo';
+import {navigateTo} from '../../../assects/helpers/navigateTo';
 
 import {NavbarItem} from './item/NavbarItem';
 import {Button, Container, Icon, Icons, Links, List, ListNavigation, Logo, Section} from './NavbarStyle';

@@ -1,5 +1,7 @@
 import React, {FC} from 'react';
 
+// @ts-ignore
+import cv from '../../assects/cv/CvIlya.pdf';
 import lineImg from '../../assects/img/line.png';
 import starShipsImg from '../../assects/img/starShips.png';
 import {UniversalButton} from '../../assects/components/UniversalButton';
@@ -16,6 +18,16 @@ interface IHeader {
 }
 
 const Header: FC<IHeader> = ({searchMode, setSearchMode}) => {
+
+  const downloadFile = () => {
+    const file = document.createElement('a');
+    file.href = cv;
+    file.setAttribute('download', 'CvIlya.pdf');
+    document.body.append(file);
+    file.click();
+    file.remove();
+  };
+
   return (
     <Section>
       <Navbar searchMode={searchMode} setSearchMode={setSearchMode}/>
@@ -29,7 +41,7 @@ const Header: FC<IHeader> = ({searchMode, setSearchMode}) => {
           <Desc>
            I create interesting applications, I try not to stand still.
           </Desc>
-          <UniversalButton title={'Learn more'}/>
+          <UniversalButton title={'Learn more'} onClickDownload={downloadFile}/>
         </Left>
         <Right>
           <HeaderCanvas/>

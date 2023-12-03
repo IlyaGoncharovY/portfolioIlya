@@ -5,7 +5,7 @@ import {UniversalButton} from '../../assects/components/UniversalButton';
 
 import {SubTitle} from '../../assects/components/SubTitle';
 
-import {navigateTo} from '../../assects/helpers/NavigateTo';
+import {navigateTo} from '../../assects/helpers/navigateTo';
 
 import {AbutMeCanvas} from './canvas/AbutMeCanvas';
 import {Container, Desc, Left, Line, Right, Section, Title, WhatWeDo} from './AdoutMeStyle';
