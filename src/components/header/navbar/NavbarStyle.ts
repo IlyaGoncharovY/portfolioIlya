@@ -41,10 +41,30 @@ export const Icons = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
+  position: relative;
+`;
+export const ListNavigation = styled.ul`
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: stretch;
+  padding-left: 20px;
+  list-style: none;
+  position: absolute;
+  top: 100%; 
+  left: -80%;
+
+  @media only screen and (min-width: 770px) {
+    display: none;
+  }
 `;
 export const Icon = styled.img`
-  width: 20px;
+  width: 30px;
   cursor: pointer;
+  
+  @media only screen and (min-width: 770px) {
+    display: none;
+  }
 `;
 export const Button = styled.button`
   width: 100px;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC} from 'react';
 
 import lineImg from '../../assects/img/line.png';
 import starShipsImg from '../../assects/img/starShips.png';
@@ -10,11 +10,16 @@ import {Navbar} from './navbar/Navbar';
 import {HeaderCanvas} from './canvas/HeaderCanvas';
 import {Container, Desc, Img, Left, Line, Right, Section, Title, WhatWeDo} from './HeaderStyle';
 
-const Header = () => {
+interface IHeader {
+  searchMode: boolean
+  setSearchMode: (value: boolean) => void
+}
+
+const Header: FC<IHeader> = ({searchMode, setSearchMode}) => {
   return (
     <Section>
-      <Navbar/>
-      <Container>
+      <Navbar searchMode={searchMode} setSearchMode={setSearchMode}/>
+      <Container id={'home'}>
         <Left>
           <Title>Hello</Title>
           <WhatWeDo>
@@ -22,7 +27,7 @@ const Header = () => {
             <SubTitle title={'That\'s what I do'}/>
           </WhatWeDo>
           <Desc>
-                        I create interesting applications, I try not to stand still.
+           I create interesting applications, I try not to stand still.
           </Desc>
           <UniversalButton title={'Learn more'}/>
         </Left>

@@ -1,4 +1,4 @@
-import React, {lazy, Suspense} from 'react';
+import React, {lazy, Suspense, useState} from 'react';
 
 import {Container} from './AppStyle';
 
@@ -8,10 +8,13 @@ const Works = lazy(() => import('./works/Works'));
 const Contact = lazy(() => import('./contact/Contact'));
 
 function App() {
+
+  const [searchMode, setSearchMode] = useState<boolean>(false);
+
   return (
-    <Container>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Header/>
+    <Container searchMode={searchMode}>
+      <Suspense fallback={<div style={{height: '100vh'}}>Loading...</div>}>
+        <Header searchMode={searchMode} setSearchMode={setSearchMode}/>
         <AboutMe/>
         <Works/>
         <Contact/>
