@@ -1,5 +1,7 @@
 import React, {lazy, Suspense, useState} from 'react';
 
+import {LoadingFallback} from '../assects/components/Loading';
+
 import {Container} from './AppStyle';
 
 const Header = lazy(() => import('./header/Header'));
@@ -13,7 +15,7 @@ function App() {
 
   return (
     <Container searchMode={searchMode}>
-      <Suspense fallback={<div style={{height: '100vh'}}>Loading...</div>}>
+      <Suspense fallback={<LoadingFallback />}>
         <Header searchMode={searchMode} setSearchMode={setSearchMode}/>
         <AboutMe/>
         <Works/>

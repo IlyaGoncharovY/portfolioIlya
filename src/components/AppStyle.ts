@@ -11,34 +11,24 @@ interface ContainerProps {
 
 export const Container = styled.div<ContainerProps>`
   font-family: 'Lilita One', sans-serif;
-  ${props => props.searchMode
-    ? css`
-            scroll-snap-type: both mandatory;
-            scroll-behavior: smooth;
-            overflow-y: auto;
-            scrollbar-width: none;
-            color: white;
-            background: url(${dgImage});
-          `
-    : css`
-            height: 100vh;
-            scroll-snap-type: both mandatory;
-            scroll-behavior: smooth;
-            overflow-y: auto;
-            scrollbar-width: none;
-            color: white;
-            background: url(${dgImage});
-          `
-};
+  height: ${({searchMode}) => (searchMode ? 'auto' : '100vh')};
+  scroll-snap-type: both mandatory;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  scrollbar-width: none;
+  color: white;
+  background: url(${dgImage});
+
   @media only screen and (max-width: 768px) {
-    //scroll-snap-type: both mandatory;
-    //scroll-behavior: smooth;
-    //overflow-y: auto;
-    //scrollbar-width: none;
     height: auto;
-    color: white;
-    background: url(${dgImage});
-  };
+  }
+
+  ${({searchMode}) =>
+    searchMode &&
+    css`
+      color: white;
+      background: url(${dgImage});
+    `};
 
   &::-webkit-scrollbar {
     display: none;
