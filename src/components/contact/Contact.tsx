@@ -6,7 +6,7 @@ import {Container, Left, Right, Section} from './ContactStyle';
 
 export const Contact = () => {
   return (
-    <Section>
+    <Section id={'contact'}>
       <Container>
         <Left>
           <FormComponent/>

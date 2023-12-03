@@ -33,7 +33,7 @@ const Works = () => {
   }
 
   return (
-    <Section>
+    <Section id={'works'}>
       <Container>
         <Left>
           <List>

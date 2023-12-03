@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {Element} from 'react-scroll';
+
 import lineImg from '../../assects/img/line.png';
 import {UniversalButton} from '../../assects/components/UniversalButton';
 
@@ -10,7 +12,7 @@ import {Container, Desc, Left, Line, Right, Section, Title, WhatWeDo} from './Ad
 
 const AboutMe = () => {
   return (
-    <Section>
+    <Section id={'about'}>
       <Container>
         <Left>
           <AbutMeCanvas/>
