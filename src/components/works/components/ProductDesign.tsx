@@ -1,12 +1,12 @@
 import React from 'react';
 
-import AtomicLogo from './3dModel/Atomic';
+import Pirat from './3dModel/PiratLogo';
 import {CustomCanvas} from './defaultModel/CustomCanvas';
 
 export const ProductDesign = React.memo(() => {
   return (
     <CustomCanvas>
-      <AtomicLogo/>
+      <Pirat/>
     </CustomCanvas>
   );
 });
