@@ -2,6 +2,8 @@ import React, {lazy, Suspense, useState} from 'react';
 
 import {LoadingFallback} from '../assects/components/Loading';
 
+import {ArrowUp} from '../assects/components/ArrowUp';
+
 import {Container} from './AppStyle';
 
 const Header = lazy(() => import('./header/Header'));
@@ -20,6 +22,7 @@ function App() {
         <AboutMe/>
         <Works/>
         <Contact/>
+        <ArrowUp/>
       </Suspense>
     </Container>
   );
