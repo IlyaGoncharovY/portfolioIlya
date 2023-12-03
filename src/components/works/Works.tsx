@@ -9,7 +9,7 @@ import {SocialMedia} from './components/SocialMedia';
 import {ProductDesign} from './components/ProductDesign';
 import {Container, Left, List, Right, Section} from './WorksStyle';
 
-const Works = () => {
+const Works = React.memo(() => {
 
   const [work, setWork] = useState<valueWorksDataType>('Web Design');
 
@@ -48,6 +48,6 @@ const Works = () => {
       </Container>
     </Section>
   );
-};
+});
 
 export default Works;
