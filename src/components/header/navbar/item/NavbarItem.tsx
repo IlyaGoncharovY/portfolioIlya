@@ -1,20 +1,27 @@
 import React, {FC} from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
-import {valueHeadersType} from '../../../../assects/dataSet/dataSet';
+import {headersDataType} from '../../../../assects/dataSet/dataSet';
 
 const ListItem = styled.li`
   cursor: pointer;
+  margin-right: 10px;
+  &:hover {
+    color: #d2f1a7;
+  }
 `;
 
 interface INavbarItem {
-    navbar: valueHeadersType
+    navbar: headersDataType
 }
 
 export const NavbarItem: FC<INavbarItem> = ({navbar}) => {
   return (
     <ListItem>
-      {navbar}
+      <Link to={navbar.scrollId} smooth={true}>
+        {navbar.value}
+      </Link>
     </ListItem>
   );
 };
