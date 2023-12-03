@@ -1,14 +1,16 @@
 export type valueHeadersType = 'Home' | 'About Me' | 'Works' | 'Contact'
+export type scrollIdHeadersType = 'home' | 'about' | 'works' | 'contact'
 
 export type headersDataType = {
     id: number
     value: valueHeadersType
+    scrollId: scrollIdHeadersType
 }
 export const headersData: headersDataType[] = [
-  {id: 1, value: 'Home'},
-  {id: 2, value: 'About Me'},
-  {id: 3, value: 'Works'},
-  {id: 4, value: 'Contact'},
+  {id: 1, value: 'Home', scrollId: 'home'},
+  {id: 2, value: 'About Me', scrollId: 'about'},
+  {id: 3, value: 'Works', scrollId: 'works'},
+  {id: 4, value: 'Contact', scrollId: 'contact'},
 ];
 
 export type valueWorksDataType = 'Web Design' | 'Development' | 'Product Design' | 'Social Media'
