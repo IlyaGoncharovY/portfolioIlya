@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 import {UniversalButton} from '../../../assects/components/UniversalButton';
 
+import {navigateTo} from '../../../assects/helpers/NavigateTo';
+
 import TelegramLogo from './3dModel/TelegramLogo';
 import {CustomCanvas} from './defaultModel/CustomCanvas';
 
@@ -30,7 +32,7 @@ export const SocialMedia = () => {
         <TelegramLogo/>
       </CustomCanvas>
       <Desc>
-        <UniversalButton title={'Send Me'}/>
+        <UniversalButton title={'Send Me'} onClickNavigate={() => navigateTo('https://t.me/ilyaGoncharov93')}/>
       </Desc>
     </>
   );

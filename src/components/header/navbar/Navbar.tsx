@@ -7,6 +7,8 @@ import searchOpenImg from '../../../assects/img/searchOpen.png';
 
 import {CustomButton} from '../../../assects/components/CustomButton';
 
+import {navigateTo} from '../../../assects/helpers/NavigateTo';
+
 import {NavbarItem} from './item/NavbarItem';
 import {Button, Container, Icon, Icons, Links, List, ListNavigation, Logo, Section} from './NavbarStyle';
 
@@ -42,7 +44,7 @@ export const Navbar: FC<INavbar> = ({searchMode, setSearchMode}) => {
               <NavbarItem key={header.id} navbar={header}/>)}
           </ListNavigation>
           <Icon src={`${isOpen ? searchOpenImg : searchImg}`} onClick={openNavigationHandler}/>
-          <Button>Hire Now!</Button>
+          <Button onClick={() => navigateTo('https://t.me/ilyaGoncharov93')}>Hire Now!</Button>
         </Icons>
       </Container>
     </Section>

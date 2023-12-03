@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, MouseEventHandler} from 'react';
 import styled from 'styled-components';
 
 const Button = styled.button`
@@ -16,15 +16,17 @@ interface IUniversalButton {
     title: string
     type?: 'button' | 'reset' | 'submit' | undefined
     disabled?: boolean
+    onClickNavigate?: MouseEventHandler<HTMLButtonElement>
 }
 
 export const UniversalButton: FC<IUniversalButton> = ({
   title,
   type,
   disabled,
+  onClickNavigate,
 }) => {
   return (
-    <Button type={type} disabled={disabled}>
+    <Button type={type} disabled={disabled} onClick={onClickNavigate}>
       {title}
     </Button>
   );
