@@ -10,6 +10,7 @@ interface ContainerProps {
 }
 
 export const Container = styled.div<ContainerProps>`
+  font-family: 'Lilita One', sans-serif;
   ${props => props.searchMode
     ? css`
             scroll-snap-type: both mandatory;
