@@ -37,4 +37,5 @@ export const List = styled.ul`
 
 export const Right = styled.div`
   flex: 1;
+  position: relative;
 `;

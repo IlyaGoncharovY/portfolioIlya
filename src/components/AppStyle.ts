@@ -18,6 +18,7 @@ export const Container = styled.div<ContainerProps>`
   scrollbar-width: none;
   color: white;
   background: url(${dgImage});
+  position: relative;
 
   @media only screen and (max-width: 768px) {
     height: auto;
