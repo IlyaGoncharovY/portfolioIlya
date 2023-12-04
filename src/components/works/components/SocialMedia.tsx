@@ -17,7 +17,7 @@ const Desc = styled.div`
   position: absolute;
   
   @media only screen and (max-width: 768px) {
-    top: 0;
+    top: -300px;
     bottom: 0;
     //left: 0;
     right: 0;
