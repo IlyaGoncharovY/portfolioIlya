@@ -3,10 +3,12 @@ import React from 'react';
 import LapTopLogo from './3dModel/LapTopLogo';
 import {CustomCanvas} from './defaultModel/CustomCanvas';
 
-export const WebDesign = React.memo(() => {
+const WebDesign = React.memo(() => {
   return (
     <CustomCanvas>
       <LapTopLogo/>
     </CustomCanvas>
   );
 });
+
+export default WebDesign;

@@ -1,13 +1,17 @@
-import React, {useState} from 'react';
+import React, {lazy, Suspense, useState} from 'react';
 
 import {valueWorksDataType, worksData} from '../../assects/dataSet/dataSet';
 
+import {LoadingFallback} from '../../assects/components/Loading';
+
 import {WorksItem} from './item/WorksItem';
-import {WebDesign} from './components/WebDesign';
-import {Development} from './components/Development';
-import {SocialMedia} from './components/SocialMedia';
-import {ProductDesign} from './components/ProductDesign';
+
 import {Container, Left, List, Right, Section} from './WorksStyle';
+
+const WebDesign = lazy(() => import('./components/WebDesign'));
+const Development = lazy(() => import('./components/Development'));
+const SocialMedia = lazy(() => import('./components/SocialMedia'));
+const ProductDesign = lazy(() => import('./components/ProductDesign'));
 
 const Works = React.memo(() => {
 
@@ -43,7 +47,9 @@ const Works = React.memo(() => {
           </List>
         </Left>
         <Right>
-          {selectedComponent}
+          <Suspense fallback={<LoadingFallback />}>
+            {selectedComponent}
+          </Suspense>
         </Right>
       </Container>
     </Section>

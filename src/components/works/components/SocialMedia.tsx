@@ -25,7 +25,7 @@ const Desc = styled.div`
   }
 `;
 
-export const SocialMedia = React.memo(() => {
+const SocialMedia = React.memo(() => {
   return (
     <>
       <CustomCanvas>
@@ -37,3 +37,5 @@ export const SocialMedia = React.memo(() => {
     </>
   );
 });
+
+export default SocialMedia;
