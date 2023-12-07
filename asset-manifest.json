@@ -23,7 +23,7 @@
     "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.e90d2924.css",
-    "static/js/main.e3a390fc.js"
+    "./static/css/main.e90d2924.css",
+    "./static/js/main.e3a390fc.js"
   ]
 }
