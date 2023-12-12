@@ -21,16 +21,16 @@ const Works = React.memo(() => {
 
   switch (work) {
   case 'Web Design':
-    selectedComponent = <WebDesign />;
+    selectedComponent = <WebDesign/>;
     break;
   case 'Development':
-    selectedComponent = <Development />;
+    selectedComponent = <Development/>;
     break;
   case 'Social Media':
-    selectedComponent = <SocialMedia />;
+    selectedComponent = <SocialMedia/>;
     break;
   case 'Product Design':
-    selectedComponent = <ProductDesign />;
+    selectedComponent = <ProductDesign/>;
     break;
   default:
     selectedComponent = null;
@@ -42,12 +42,16 @@ const Works = React.memo(() => {
         <Left>
           <List>
             {worksData.map((el) => (
-              <WorksItem key={el.id} work={el} setWork={setWork}/>
+              <WorksItem
+                key={el.id} work={el}
+                setWork={setWork}
+                isSelected={el.value === work}
+              />
             ))}
           </List>
         </Left>
         <Right>
-          <Suspense fallback={<LoadingFallback />}>
+          <Suspense fallback={<LoadingFallback/>}>
             {selectedComponent}
           </Suspense>
         </Right>

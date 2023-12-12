@@ -87,7 +87,12 @@ export const FormComponent = () => {
       />
       {formik.touched.message && formik.errors.message &&
                 <div style={{color: 'red', opacity: 0.8}}>{formik.errors.message}</div>}
-      <UniversalButton type={'submit'} disabled={formik.isSubmitting} title={`${buttonState}`}/>
+      <UniversalButton
+        type={'submit'}
+        disabled={formik.isSubmitting}
+        isSubmitting={formik.isSubmitting}
+        title={`${buttonState}`}
+      />
     </Form>
   );
 };

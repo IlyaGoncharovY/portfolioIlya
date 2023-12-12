@@ -1,15 +1,20 @@
 import React, {FC, MouseEventHandler} from 'react';
 import styled from 'styled-components';
 
-const Button = styled.button`
+interface IButtonProps {
+    isSubmitting: boolean | undefined;
+}
+
+const Button = styled.button<IButtonProps>`
   background-color: #9bc2c2;
   color: white;
   font-weight: bold;
   //width: 120px;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
+  cursor: ${({ isSubmitting }) => (isSubmitting ? 'not-allowed' : 'pointer')};
   padding: 20px;
+  opacity: ${({ isSubmitting }) => (isSubmitting ? 0.5 : 1)};
 `;
 
 interface IUniversalButton {
@@ -18,6 +23,7 @@ interface IUniversalButton {
     disabled?: boolean
     onClickNavigate?: MouseEventHandler<HTMLButtonElement>
     onClickDownload?: () => void
+    isSubmitting?: boolean | undefined
 }
 
 export const UniversalButton: FC<IUniversalButton> = ({
@@ -26,9 +32,14 @@ export const UniversalButton: FC<IUniversalButton> = ({
   disabled,
   onClickNavigate,
   onClickDownload,
+  isSubmitting,
 }) => {
   return (
-    <Button type={type} disabled={disabled} onClick={onClickNavigate || onClickDownload}>
+    <Button
+      isSubmitting={isSubmitting}
+      type={type} disabled={disabled}
+      onClick={onClickNavigate || onClickDownload}
+    >
       {title}
     </Button>
   );
