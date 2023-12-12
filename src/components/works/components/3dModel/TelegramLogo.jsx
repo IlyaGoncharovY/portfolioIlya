@@ -12,7 +12,7 @@ import React from 'react';
 import {useGLTF} from '@react-three/drei';
 
 export default function Model(props) {
-  const { nodes, materials } = useGLTF('/telegramLogo-transformed.glb');
+  const { nodes, materials } = useGLTF('./models/telegramLogo-transformed.glb');
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Object_4.geometry}
@@ -30,4 +30,4 @@ export default function Model(props) {
   );
 }
 
-useGLTF.preload('/telegramLogo-transformed.glb');
+useGLTF.preload('./models/telegramLogo-transformed.glb');

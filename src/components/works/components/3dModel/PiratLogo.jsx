@@ -12,7 +12,7 @@ import React from 'react';
 import {useGLTF} from '@react-three/drei';
 
 export default function Model(props) {
-  const { nodes, materials } = useGLTF('/piratLogo-transformed.glb');
+  const { nodes, materials } = useGLTF('./models/piratLogo-transformed.glb');
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Object_7.geometry} material={materials['Walker.png']} position={[0, 1.469, 0.125]} />
@@ -20,4 +20,4 @@ export default function Model(props) {
   );
 }
 
-useGLTF.preload('/piratLogo-transformed.glb');
+useGLTF.preload('./models/piratLogo-transformed.glb');

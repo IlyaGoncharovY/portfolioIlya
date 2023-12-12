@@ -13,7 +13,7 @@ export const MapChart = () => {
       style={{width: '100%', height: '100%'}}
     >
       <Geographies
-        geography="/features.json"
+        geography="./features.json"
         fill="#9bc2c2"
         stroke="#FFFFFF"
         strokeWidth={0.5}

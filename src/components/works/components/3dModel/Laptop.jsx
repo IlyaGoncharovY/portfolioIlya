@@ -12,7 +12,7 @@ import React from 'react';
 import {useGLTF} from '@react-three/drei';
 
 export default function Model(props) {
-  const {nodes, materials} = useGLTF('/Laptop-transformed1.glb');
+  const {nodes, materials} = useGLTF('./models/Laptop-transformed1.glb');
 
   return (
     <group {...props} dispose={null}>
@@ -28,4 +28,4 @@ export default function Model(props) {
   );
 }
 
-useGLTF.preload('/Laptop-transformed1.glb');
+useGLTF.preload('./models/Laptop-transformed1.glb');
