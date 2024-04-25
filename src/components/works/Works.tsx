@@ -29,7 +29,7 @@ const Works = React.memo(() => {
   case 'Social Media':
     selectedComponent = <SocialMedia/>;
     break;
-  case 'Product Design':
+  case 'Prod. Design':
     selectedComponent = <ProductDesign/>;
     break;
   default:

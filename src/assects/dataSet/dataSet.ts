@@ -13,7 +13,7 @@ export const headersData: headersDataType[] = [
   {id: 4, value: 'Contact', scrollId: 'contact'},
 ];
 
-export type valueWorksDataType = 'Web Design' | 'Development' | 'Product Design' | 'Social Media'
+export type valueWorksDataType = 'Web Design' | 'Development' | 'Prod. Design' | 'Social Media'
 
 export type worksDataType = {
     id: number,
@@ -23,6 +23,6 @@ export type worksDataType = {
 export const worksData: worksDataType[] = [
   {id: 1, value: 'Web Design'},
   {id: 2, value: 'Development'},
-  {id: 3, value: 'Product Design'},
+  {id: 3, value: 'Prod. Design'},
   {id: 4, value: 'Social Media'},
 ];

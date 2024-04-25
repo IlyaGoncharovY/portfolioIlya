@@ -9,7 +9,7 @@ import TelegramLogo from './3dModel/TelegramLogo';
 import {CustomCanvas} from './defaultModel/CustomCanvas';
 
 const Desc = styled.div`
-  width: 200px;
+  //width: 200px;
   height: 70px;
   padding: 20px;
   bottom: 100px;
@@ -17,6 +17,7 @@ const Desc = styled.div`
   position: absolute;
   
   @media only screen and (max-width: 768px) {
+      width: 170px;
     top: -300px;
     bottom: 0;
     //left: 0;
