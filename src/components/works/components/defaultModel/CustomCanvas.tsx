@@ -9,7 +9,7 @@ type CustomCanvasType = {
 export const CustomCanvas = React.memo( (props: CustomCanvasType) => {
   return (
     <Canvas>
-      <Stage environment={'city'} intensity={0.6}>
+      <Stage environment={'city'} intensity={0.001}>
         {props.children}
       </Stage>
       <OrbitControls enableZoom={false} autoRotate={true}/>
